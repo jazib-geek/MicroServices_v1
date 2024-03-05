@@ -14,5 +14,6 @@ namespace StudentService.DAL.Repositories
         Task AddAsync(tblStudent student);
         Task UpdateAsync(tblStudent student);
         Task DeleteAsync(tblStudent student);
+        void Detach(tblStudent student);
     }
 }

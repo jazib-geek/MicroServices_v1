@@ -45,12 +45,19 @@ namespace StudentService.BLL.Services
                 throw new Exception($"Student with ID {studentId} not found.");
             }
 
-            var updatedStudent = MapToEntity(studentDto);
-            updatedStudent.Id = studentId;
+            // Update the properties of the existing student entity with the new values
+            existingStudent.Name = studentDto.Name;
+            existingStudent.RollNum = studentDto.RollNum;
+            existingStudent.Email = studentDto.Email;
+            existingStudent.IsActive = studentDto.IsActive;
 
-            await _studentRepository.UpdateAsync(updatedStudent);
+            // Detach the entity from the DbContext to prevent tracking conflicts
+            _studentRepository.Detach(existingStudent);
 
-            return MapToDto(updatedStudent);
+            // Save the changes to the database
+            await _studentRepository.UpdateAsync(existingStudent);
+
+            return MapToDto(existingStudent);
         }
 
         public async Task DeleteStudentAsync(int studentId)

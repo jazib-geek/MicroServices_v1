@@ -45,5 +45,9 @@ namespace StudentService.DAL.Repositories
             _dbContext.Students.Remove(student);
             await _dbContext.SaveChangesAsync();
         }
+        public void Detach(tblStudent student)
+        {
+            _dbContext.Entry(student).State = EntityState.Detached;
+        }
     }
 }

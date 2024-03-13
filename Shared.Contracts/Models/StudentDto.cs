@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentService.BLL.Models
+namespace Shared.Contracts.Models
 {
     public class StudentDto
     {

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -8,20 +8,16 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.7" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.16" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.16">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.16" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shared.Contracts\Shared.Contracts.csproj" />
-    <ProjectReference Include="..\StudentService.BLL\StudentService.BLL.csproj" />
-    <ProjectReference Include="..\StudentService.DAL\StudentService.DAL.csproj" />
+    <ProjectReference Include="..\CourseService.BLL\CourseService.BLL.csproj" />
+    <ProjectReference Include="..\CourseService.DAL\CourseService.DAL.csproj" />
   </ItemGroup>
 
 </Project>

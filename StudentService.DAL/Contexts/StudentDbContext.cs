@@ -11,6 +11,7 @@ namespace StudentService.DAL.Contexts
     public class StudentDbContext : DbContext
     {
         public DbSet<tblStudent> Students { get; set; }
+        public DbSet<tblStudentCourse> StudentCourse { get; set; }
 
         public StudentDbContext(DbContextOptions<StudentDbContext> options) : base(options)
         {
@@ -20,6 +21,7 @@ namespace StudentService.DAL.Contexts
         {
             // Configure entity mappings, relationships, etc. if needed
             modelBuilder.Entity<tblStudent>().ToTable("tblStudent");
+            modelBuilder.Entity<tblStudentCourse>().ToTable("tblStudentCourse");
         }
     }
 }

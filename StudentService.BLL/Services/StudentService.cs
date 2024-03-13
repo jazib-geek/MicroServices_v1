@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using StudentService.BLL.Models;
+using Shared.Contracts.Models;
 using StudentService.BLL.Interfaces;
 using StudentService.DAL.Entities;
 using StudentService.DAL.Repositories;

@@ -12,7 +12,9 @@ builder.Services.AddControllers();
 
 // Add BLL and DAL services
 builder.Services.AddScoped<IStudentService, StudentService.BLL.Services.StudentService>();
+builder.Services.AddScoped<IStudentCourseService, StudentService.BLL.Services.StudentCourseService>();
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<IStudentCourseRepository, StudentCourseRepository>();
 
 // Add DbContext
 //builder.Services.AddDbContext<StudentDbContext>(options =>

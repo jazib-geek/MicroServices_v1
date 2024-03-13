@@ -18,11 +18,13 @@
   <ItemGroup>
     <Folder Include="Extensions\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Models\" />
     <Folder Include="Validators\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Shared.Contracts\Shared.Contracts.csproj" />
     <ProjectReference Include="..\StudentService.DAL\StudentService.DAL.csproj" />
   </ItemGroup>
 
